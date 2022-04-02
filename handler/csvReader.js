@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import CreateSalesforce from './createSalesforce.js';
 
-const directory = './files/attachments'
+const directory = './files'
 
 let csvDataArray = [];
 let propertyData = [];
