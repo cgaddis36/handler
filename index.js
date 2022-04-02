@@ -1,6 +1,6 @@
 import express from 'express';
 import logger from 'morgan';
-import Handler from './Handler/index.js';
+import Handler from './handler/index.js';
 
 const port = process.env.PORT || 8000;
 const app = express();
