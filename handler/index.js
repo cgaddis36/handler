@@ -52,20 +52,20 @@ const downloadJob = async () => {
 
 const Handler = () => {
     console.log('Registering Jobs');
-    const job = cron.schedule('0 0 * * *', async() =>
+    const job = cron.schedule('*/1 * * * * *', async() =>
       {
         await downloadJob();
-        // event.emit('TASK1 COMPLETED');
+        event.emit('TASK1 COMPLETED');
       },
       {
         scheduled: true,
         timezone: 'America/New_York',
       }
     );
-    // event.on('TASK1 COMPLETED', () => {
-    //   console.log('task1 done!');
-    //   job.stop();
-    // });
+    event.on('TASK1 COMPLETED', () => {
+      console.log('task1 done!');
+      job.stop();
+    });
 }
 
 export default Handler;
