@@ -6,7 +6,7 @@ const event = new EventEmitter();
 
 import CsvReader from './csvReader.js';
 
-const opDir = "./attachements";
+const opDir = "./files";
 const email = "prodev.0210@gmail.com";
 const password =  "wbazmkcbrwkhdlke"
 const port = 993;
